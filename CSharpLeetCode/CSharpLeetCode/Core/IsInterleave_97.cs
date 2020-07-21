@@ -8,6 +8,102 @@ namespace CSharpLeetCode.Core
 {
     public class IsInterleave_97
     {
+        public int[] CountSubTrees(int n, int[][] edges, string labels)
+        {
+            var result = new int[n];
+
+            
+
+
+            for (int i = 0; i < n; i++)
+            {
+                result[i] = tree(i, i, edges, labels);
+            }
+
+            return result;
+        }
+
+        private int tree(int n, int charIndex, int[][] edges, string lables)
+        {
+            bool isRoot = false;
+
+            foreach (var item in edges)
+            {
+                if (item[0] == n)
+                {
+                    if (edges.Any(x => x[1] == item[1] && x[0] < item[0]))
+                    {
+                        var temp = item[0];
+                        item[0] = item[1];
+                        item[1] = temp;
+
+                        return tree(n, charIndex, edges, lables);
+                    }
+
+                    isRoot = true;
+                    break;
+                }
+            }
+
+            if (!isRoot)
+            {
+                if (lables[charIndex] == lables[n])
+                {
+                    return 1;
+                }
+
+                return 0;
+            }
+
+            int result = 0;
+
+            if (lables[charIndex] == lables[n])
+            {
+                result = 1;
+            }
+
+            foreach (var item in edges)
+            {
+                if (item[0] == n)
+                {
+                    result += tree(item[1], charIndex, edges, lables);
+                }
+            }
+
+            return result;
+        }
+
+
+
+        public int NumWaterBottles(int numBottles, int numExchange)
+        {
+            if (numExchange > numBottles)
+                return numBottles;
+
+            int emptyCount = numBottles;
+            int newCount = 0;
+            int result = numBottles;
+
+            while (emptyCount >= numExchange)
+            {
+                newCount = emptyCount / numExchange;
+                emptyCount = newCount + emptyCount % numExchange;
+
+                result += newCount;
+            }
+
+            return result;
+        }
+
+
+
+
+
+
+
+
+
+
         //这道题目很值得纪念一下。对官方给出的解答十分佩服，另外虽然自己做的过程 99/101 没有完全通过，但是思考过程也觉得有很多可以留意的地方。
 
         //下面注释掉的是我自己的想法。
