@@ -1,4 +1,5 @@
-﻿using CSharpLeetCode.Core;
+﻿using CSharpLeetCode.Common;
+using CSharpLeetCode.Core;
 using System;
 
 namespace CSharpLeetCode
@@ -7,25 +8,23 @@ namespace CSharpLeetCode
     {
         public static void Main(string[] args)
         {
-            //使用对应的文件来跑，举个例子：
-            //Tribonacci_1137 solution = new Tribonacci_1137();
-            //solution.Tribonacci(25);
+            //var solution = new Temp_199();
 
-            //IsPalindrome_125 solution = new IsPalindrome_125();
-            //solution.IsPalindrome("race a car");
+            //var root = new TreeNode(1);
+            //root.left = new TreeNode(2, null, new TreeNode(4));
+            //root.right = new TreeNode(3, null, null);
+            ////root.left = new TreeNode(2, new TreeNode(4), new TreeNode(5));
+            ////root.right = new TreeNode(3, new TreeNode(6), new TreeNode(7));
 
-            IsInterleave_97 solution = new IsInterleave_97();
-            //            var result = solution.IsInterleave("bbbbbabbbbabaababaaaabbababbaaabbabbaaabaaaaababbbababbbbbabbbbababbabaabababbbaabababababbbaaababaa",
-            //"babaaaabbababbbabbbbaabaabbaabbbbaabaaabaababaaaabaaabbaaabaaaabaabaabbbbbbbbbbbabaaabbababbabbabaab",
-            //"babbbabbbaaabbababbbbababaabbabaabaaabbbbabbbaaabbbaaaaabbbbaabbaaabababbaaaaaabababbababaababbababbbababbbbaaaabaabbabbaaaaabbabbaaaabbbaabaaabaababaababbaaabbbbbabbbbaabbabaabbbbabaaabbababbabbabbab");
+            ////var root = new TreeNode(7);
+            ////root.left = new TreeNode(1, new TreeNode(6), null);
+            ////root.right = new TreeNode(4, new TreeNode(5), new TreeNode(3,null, new TreeNode(2)));
 
-            //var result = solution.IsInterleave("aabcc","dbbca","aadbcbbcac");
+            //var result = solution.CountPairs(root, 3);
 
-            //var test = solution.CountSubTrees(7, new int[][] { new int[]{ 0, 1 }, new int[] { 0, 2 }, new int[] { 1, 4 }, new int[] { 1, 5 }, new int[] { 2, 3 }, new int[] { 2, 6 } }, "abaedcd");
+            var soulution = new Temp_200();
 
-            //var test = solution.CountSubTrees(5, new int[][] { new int[] { 0, 1 }, new int[] { 0, 2 }, new int[] { 1, 3 }, new int[] { 0, 4 } }, "aabab");
-
-            var test = solution.CountSubTrees(4, new int[][] { new int[] { 0, 2 }, new int[] { 0, 3 }, new int[] { 1, 2 } }, "aeed");
+            soulution.MinSwaps(new int[][] { new int[] {1,0, 0,0}, new int[] { 1, 1, 1, 1 }, new int[] { 1, 0, 0, 0 } , new int[] { 1, 0, 0, 0 } });
 
             Console.ReadLine();
         }

@@ -44,10 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonDataStruct.cs" />
+    <Compile Include="Common\TreeNode.cs" />
+    <Compile Include="Core\Flatten_114.cs" />
+    <Compile Include="Core\GenerateTrees_95.cs" />
     <Compile Include="Core\IsInterleave_97.cs" />
     <Compile Include="Core\IsPalindrome_125.cs" />
+    <Compile Include="Core\LongestIncreasingPath_329.cs" />
     <Compile Include="Core\MaxProfit_309.cs" />
     <Compile Include="Core\MaxScoreSightseeingPair_1014.cs" />
+    <Compile Include="Core\ReverseLeftWords_Offer_58.cs" />
+    <Compile Include="Core\Temp_199.cs" />
+    <Compile Include="Core\Temp_200.cs" />
     <Compile Include="Core\Tribonacci_1137.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
