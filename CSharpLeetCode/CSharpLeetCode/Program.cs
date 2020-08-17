@@ -22,10 +22,17 @@ namespace CSharpLeetCode
 
             //var result = solution.CountPairs(root, 3);
 
-            var soulution = new Temp_201();
+            //var soulution = new Temp_201();
 
-            var t = soulution.MaxNonOverlapping(new int[] { -5, 5, -4, 5, 4 }, 5);
+            //var t = soulution.MaxNonOverlapping(new int[] { -5, 5, -4, 5, 4 }, 5);
             //var t = soulution.MaxNonOverlapping(new int[] { 1, 1, 1, 1, 1 }, 2);
+
+
+
+            var solution = new Temp_202();
+
+            var t = solution.MinDays(56);
+            var x = t;
 
         }
     }

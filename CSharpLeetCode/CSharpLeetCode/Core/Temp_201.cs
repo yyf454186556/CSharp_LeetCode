@@ -48,7 +48,6 @@ namespace CSharpLeetCode.Core
                     }
                     else if (sum > target)
                     {
-                        end = -1;
                         break;
                     }
                 }
